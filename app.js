@@ -16,13 +16,24 @@ async function main(){
         messages: [
             {
                 role: 'system',
-                content:`You are Jarvis, a smart review grader. Your task is to analyse given review and return the sentiment. Classify the review as positive, neutral or negative. You must return the resukt in valid JSON structure.
-                example: {"sentiment":"Negative"}`,
+                content: '',
+                // content:`You are Jarvis, a smart review grader. Your task is to 
             },
             {
                 role: 'user',
-                content: `  Review: These headphones arrived quickly and look great, but th left earcup stopped working a week .
-                Sentiment: `,
+                content: `You are a interview grader assistant.Your task to generate candidate evaluation score.
+                output must be following JSON structure:
+                {
+                "confidence":number (1-10 scale),
+                "accuracy":number(1-10 scale),
+                "pass": boolean (true or false)
+            }
+                The response must:
+                    1. Include ALL fields shown above
+                    2. Use only the exact field names shown
+                    3. Follow the exact data types specified
+                    4. Contain ONLY the JSON object and nothing else
+                }`,
             }
 
         ]
