@@ -16,12 +16,7 @@ async function main(){
         messages: [
             {
                 role: 'system',
-                content: '',
-                // content:`You are Jarvis, a smart review grader. Your task is to 
-            },
-            {
-                role: 'user',
-                content: `You are an interview grader assistant.Your task is to generate candidate evaluation score.
+                content:  `You are an interview grader assistant.Your task is to generate candidate evaluation score.
                 output must be following JSON structure:
                 {
                 "confidence":number (1-10 scale),
@@ -34,6 +29,23 @@ async function main(){
                     3. Follow the exact data types specified
                     4. Contain ONLY the JSON object and nothing else
                 }`,
+                // content:`You are Jarvis, a smart review grader. Your task is to 
+            },
+            {
+                role: 'user',
+                content: `Q: what does === do in JavaScript?
+                A: It checks strict equality-both value and type must match.
+                
+                Q: How do you create a promise that resolves after 1 second?
+                A: const p=new Promise(r => setTimeout(r,1000));
+                
+                Q: What is hoisting?
+                A: Javascript moves declaration (but not initialization) to the top of their scope before code runs.
+                
+                Q: why use let instead of var?
+                A: let is block-scoped, aviding the function-scope quirks and re-declaration issues of var.`,
+
+                 
             }
 
         ]
