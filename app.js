@@ -21,7 +21,7 @@ async function main(){
             },
             {
                 role: 'user',
-                content: `You are a interview grader assistant.Your task to generate candidate evaluation score.
+                content: `You are an interview grader assistant.Your task is to generate candidate evaluation score.
                 output must be following JSON structure:
                 {
                 "confidence":number (1-10 scale),
